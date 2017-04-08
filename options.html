@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/options.css" type="text/css"/>
+</head>
+<body>
+    <div>
+            <fieldset>
+                <legend>Image tagging</legend>
+                <div>
+                    <span>Minimum image size:</span>
+                    <label><input type="number" name="width" value="70" /> width</label>
+                    <label><input type="number" name="height" value="70" /> height</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" value="1" name="modifier" id="modifier"/>
+                    <label for="modifier">Enable shift-key modifier</label>
+                    <p>Enable to only show the tag button when the shift key is pressed.</p>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Storage</legend>
+                <div>
+                    <input type="checkbox" value="1" name="cache" id="cache"/>
+                    <label for="cache">Enable caching</label>
+                    <p>Use this option to save images in the browser storage. Images will be visible even if they are gone from origin servers.<br/>You can adjust the storage quota in opera:config 'User JS Storage Quota'.</p>
+                    <p><strong>Note:</strong> Images won't be cached if the storage is full.</p>
+                </div>
+
+                <div>
+                    <button type=button>Import</button>
+                    <button type=button>Export</button>
+                </div>
+        </fieldset>
+    </div>
+    <script src="js/options.js"></script>
+</body>
+</html>

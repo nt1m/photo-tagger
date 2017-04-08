@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Photo saver",
+  "version": "1.0",
+  "description": "Photo saver",
+  "permissions": ["tabs"],
+  // "background": {
+  //   "scripts": ["js/background.js"]
+  // },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["includes/all-tabs.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "options.html",
+  "author": "Tim Nguyen & Opera",
+  "sidebar_action": {
+    "default_title": "Photo saver",
+    "default_panel": "index.html"
+  }
+}
